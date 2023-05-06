@@ -8,38 +8,20 @@
    <title>todo</title>
 </head>
 <body>
-   <section class="main">
-      <div class="main__body">
-         <header class="main__head head">
-            <div class="head__logo">ToDo</div>
-            <div class="head__tools-row">
-               <div class="head__create">create</div>
-               <div class="head__create">spesial</div>
-            </div>
-         </header>
-         <div class="main__colum colum">
-            <div class="colum__item">
-               <div class="colum__number">1</div>
-               <div class="colum__content">Lorem ipsum dolor sit, amet consectetur adipisicin</div>
-               <div class="colum__delete-btn">dlete</div>
-            </div>
-            <div class="colum__item">
-               <div class="colum__number">1</div>
-               <div class="colum__content">Lorem ipsum dolor sit, amet consectetur adipisicin</div>
-               <div class="colum__delete-btn">dlete</div>
-            </div>
+   <div class="container">
+      <div class="todo-app">
+         <h2>To-DO list <img src="img/plus.png" alt=""></h2>
+         <div class="row">
+            <input type="text" id="input-box" placeholder="Add your text">
+            <button onclick="addTask()">Add</button>
          </div>
+         <ul id="list-container">
+            <!--<li class="checked">task 1</li>
+            <li>task 2</li>
+            <li>task 3</li>-->
+         </ul>
       </div>
-   </section>
-
-
-
-
-
-
-
-
-
+   </div>
    <script src="js/style.js"></script>
 </body>
 </html>

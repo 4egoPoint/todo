@@ -1,153 +1,98 @@
-/*=---=*/
-* {
-  padding: 0;
-  margin: 0;
-  border: 0;
+*{
+   margin: 0;
+   padding: 0;
+   font-family: 'Poppins', 'sans-serif';
+   box-sizing: border-box;
 }
-
-*, *:before, *:after {
-  box-sizing: border-box;
+.container{
+   width: 100%;
+   min-height: 100vh;
+   background:linear-gradient(135deg, #153677, #4e085f);
+   padding: 10px;
 }
-
-:focus, :active {
-  outline: none;
+.todo-app{
+   width: 100%;
+   max-width: 540px;
+   background: #fff;
+   margin: 100px auto 20px;
+   padding: 40px 30px 70px;
+   border-radius: 10px;
 }
-
-a:focus, a:active {
-  outline: none;
+.todo-app h2{
+   color: #002765;
+   display: flex;
+   align-items: center;
+   margin-bottom: 20px;
 }
-
-nav, footer, header, aside {
-  display: block;
+.todo-app h2 img{
+   width: 30px;
+   margin-left: 10px;
 }
-
-html, body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+.row{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background: #eddef0;
+   border-radius: 30px;
+   padding-left: 20px;
+   margin-bottom: 25px;
 }
-
-input, button, textarea {
-  font-family: inherit;
+.row input{
+   flex: 1;
+   border: none;
+   outline: none;
+   background: transparent;
+   padding: 10px;
 }
-
-input::-ms-clear {
-  display: none;
+button{
+   border: none;
+   outline: none;
+   padding: 16px 50px;
+   background: #ff5945;
+   color: #fff;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 40px;
 }
-
-button {
-  cursor: pointer;
+ul li{
+   list-style: none;
+   font-size: 17px;
+   padding: 12px 8px 12px 50px;
+   user-select: none;
+   cursor: pointer;
+   position: relative;
 }
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+ul li::before{
+   content: '';
+   position: absolute;
+   height: 28px;
+   width: 28px;
+   border-radius: 50%;
+   background-image: url(../img/no.png);
+   background-size: cover;
+   background-position: center;
+   top: 12px;
+   left: 8px;
 }
-
-a, a:visited {
-  text-decoration: none;
+ul li.checked{
+   color: #555;
+   text-decoration: line-through;
 }
-
-a:hover {
-  text-decoration: none;
+ul li.checked::before{
+   background-image: url(../img/yes.png);
 }
-
-ul li {
-  list-style: none;
+ul li span{
+   position: absolute;
+   right: 0;
+   top: 5px;
+   height: 40px;
+   width: 40px;
+   font-size: 22px;
+   color: #555;
+   line-height: 40px;
+   text-align: center;
+   border-radius: 50%;
 }
-
-img {
-  vertical-align: top;
+ul li span:hover{
+   background: #edeef0;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: inherit;
-  font-weight: 400;
-}
-
-/*=---=*/
-.main {
-  color: black;
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 500;
-}
-.main__body {
-  max-width: 600px;
-  margin: 100px auto 0;
-  border: 2px solid black;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 2px 2px 5px gray;
-}
-.main__head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 40px;
-}
-.head {
-  border-bottom: 2px solid lightgray;
-}
-.head__logo {
-  cursor: context-menu;
-  color: black;
-  font-size: 22px;
-  font-weight: 600;
-  text-shadow: 1px 1px 15px rgb(160, 160, 160);
-}
-.head__tools-row {
-  display: flex;
-  align-items: center;
-}
-.head__create {
-  cursor: pointer;
-  padding: 7px;
-  border: 1px solid orange;
-  margin-left: 5px;
-  border-radius: 4px;
-}
-.head__create:hover {
-  background-color: orange;
-  color: aliceblue;
-}
-
-.colum__item {
-  margin: 5px;
-  padding: 8px 6px;
-  display: flex;
-  align-items: center;
-}
-.colum__item:not(:last-child) {
-  border-bottom: 2px solid black;
-}
-.colum__number {
-  cursor: context-menu;
-  align-items: center;
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  padding: 4px;
-  border: 1px solid orange;
-  border-radius: 50%;
-  margin-right: 8px;
-}
-.colum__content {
-  width: 90%;
-  cursor: context-menu;
-}
-.colum__delete-btn {
-  padding: 4px;
-  border-left: 2px solid gray;
-  cursor: pointer;
-}
-.colum__delete-btn:hover {
-  border-left: none;
-  text-decoration: underline;
-  background-color: rgb(233, 233, 233);
-}/*# sourceMappingURL=style.css.map */

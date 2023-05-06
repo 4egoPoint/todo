@@ -16,89 +16,80 @@
    img{vertical-align: top;}
    h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*=---=*/
-.main {
-   color: black;
-   font-size: 18px;
-   line-height: 21px;
-
-   font-weight: 500;
-   &__body {
-      max-width: 600px;
-      margin: 100px auto 0;
-      border: 2px solid black;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 2px 2px 5px gray;
-   }
-   &__head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      height: 40px;
-   }
-   &__colum {
-   }
-}
-.head {
-   border-bottom: 2px solid lightgray;
-   &__logo {
-      cursor: context-menu;
-      color: black;
-      font-size: 22px;
-      font-weight: 600;
-      text-shadow: 1px 1px 15px rgb(160, 160, 160);
-   }
-   &__tools-row {
-      display: flex;
-      align-items: center;
-   }
-   &__create {
-      cursor: pointer;
-      padding: 7px;
-      border: 1px solid orange;
-      margin-left: 5px;
-      border-radius: 4px;
-   }
-   &__create:hover {
-      background-color: orange;
-      color: aliceblue;
-   }
+body {
+   background-color: lightgray;
 }
 .colum {
-   &__item {
-      margin: 5px;
-      padding: 8px 6px;
-      display: flex;
-      align-items: center;
+   width: 700px;
+   margin: 0 auto;
+   background-color: white;
+   padding: 15px;
+   &__intro {
+      font-size: 45px;
+      padding: 20px;
    }
-   &__item:not(:last-child) {
-      border-bottom: 2px solid black;
+   &__block {
+      height: 200px;
+      margin-bottom: 40px;
+      overflow: auto;
    }
-   &__number {
-      cursor: context-menu;
-      align-items: center;
+   &__null-list {
+      height: 70px;
+      padding: 4px;
+      border: 1px solid gray;
       text-align: center;
-      width: 30px;
-      height: 30px;
-      padding: 4px;
-      border: 1px solid orange;
-      border-radius: 50%;
-      margin-right: 8px;
+      font-size: 35px;
+      font-weight: 300;
    }
-   &__content {
-      width: 90%;
-      cursor: context-menu;
+   &__item {
+      min-height: 24px;
+      display: flex;
+      padding: 2px 2px 2px 6px;
+      margin: 10px 0 0 0;
+      border-bottom:1px solid black ;
+      align-items: center;
    }
-   &__delete-btn {
-      padding: 4px;
-      border-left: 2px solid gray;
-      cursor: pointer;
+   &__goal {
+      width: 94%;
    }
-   &__delete-btn:hover {
-      border-left: none;
-      text-decoration: underline;
-      background-color: rgb(233, 233, 233);
+   &__done-icon {
+   }
+   &__remove-icon {
    }
 }
-//===(bem__blocks)===========================================
+.icon {
+}
+.icon-img {
+   width: 20px;
+   margin-right: 5px;
+   padding: 4px;
+   &:hover {
+      background-color: lightgrey;
+   }
+}
+.addtool {
+   display: flex;
+   flex-direction: column;
+   width: 700px;
+   margin: 0 auto;
+   background-color: white;
+   padding: 10px 15px;
+   border: 2px solid red;
+   &__title {
+      padding: 4px;
+      font-size: 30px;
+   }
+
+   &__input {
+      width: 100%;
+      font-size: 24px;
+      padding: 4px;
+      &:focus {
+         box-shadow: 0px 1px 10px blue;
+         border-radius: 10px;
+      }
+   }
+}
+.btn {
+   margin-top: 10px;
+}
